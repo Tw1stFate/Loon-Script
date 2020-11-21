@@ -99,6 +99,7 @@ function signin() {
       body: body,
     };
     $.post(signinRequest, (error, response, data) => {
+      console.log(response);
       var body = response.body;
       var obj = JSON.parse(body);
       msge = obj.message;
