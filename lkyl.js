@@ -51,6 +51,7 @@ let isGetCookie = typeof $request !== "undefined";
 if (isGetCookie) {
   GetCookie();
 } else {
+  $msg("========");
   !(async () => {
     await sign(); // 签到
     await info(); // 账号信息
