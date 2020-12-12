@@ -49,7 +49,7 @@ function farm() {
       function (error, response, data) {
         let res = JSON.parse(data);
         console.log(res)
-        console.log(`农场=> ${res.massage}`);
+        // console.log(`农场=> ${res.massage}`);
         resolve();
       }
     );
