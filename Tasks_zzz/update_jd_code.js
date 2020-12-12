@@ -67,6 +67,7 @@ function pet() {
         if (response.status == 200) {
         } else {
         }
+        console.log(response)
         resolve();
       }
     );
