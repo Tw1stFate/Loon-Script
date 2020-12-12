@@ -28,10 +28,10 @@ console.log("=========开始重新添加京东助力码=========");
 
 !(async () => {
   await farm();
-  // await bean();
-  // await pet();
-  // await jxfactory();
-  // await ddfactory();
+  await bean();
+  await pet();
+  await jxfactory();
+  await ddfactory();
 })()
   .catch((e) => {
     this.log("=========fail=========");
@@ -60,7 +60,7 @@ function bean() {
     $httpClient.get(
       "http://api.turinglabs.net/api/v1/jd/bean/create/75f7c7vrcm5zbfod5t26fp44fi/",
       function (error, response, data) {
-        let resData = JSON.parse(data);
+        let resData = JSON.parse(data)
         console.log(`种豆=> ${resData.message}`);
         resolve();
       }
@@ -73,7 +73,7 @@ function pet() {
     $httpClient.get(
       "http://api.turinglabs.net/api/v1/jd/pet/create/MTAxODEyMjkyMDAwMDAwMDQwMzg4ODEz/",
       function (error, response, data) {
-        let resData = JSON.parse(data);
+        let resData = JSON.parse(data)
         console.log(`宠萌=> ${resData.message}`);
         resolve();
       }
@@ -86,7 +86,7 @@ function jxfactory() {
     $httpClient.get(
       "http://api.turinglabs.net/api/v1/jd/jxfactory/create/Hz0ItUK3zR6NCRVu-ajkGg==/",
       function (error, response, data) {
-        let resData = JSON.parse(data);
+        let resData = JSON.parse(data)
         console.log(`惊喜工厂=> ${resData.message}`);
         resolve();
       }
@@ -99,7 +99,7 @@ function ddfactory() {
     $httpClient.get(
       "http://api.turinglabs.net/api/v1/jd/ddfactory/create/P04z54XCjVWnYaS5uK2s7ZWeqXuLg/",
       function (error, response, data) {
-        let resData = JSON.parse(data);
+        let resData = JSON.parse(data)
         console.log(`东东工厂=> ${resData.message}`);
         resolve();
       }
