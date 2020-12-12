@@ -64,14 +64,14 @@ function pet() {
         if (response.status == 200) {
         } else {
         }
-        console.log(response)
+        console.log(data)
         resolve();
       }
     );
   });
 }
 
-function farm() {
+function zzz() {
   return new Promise((resolve, reject) => {
     $httpClient.get(
       "http://api.turinglabs.net/api/v1/jd/farm/create/bc1cd851e963492884852dc6119c33a6/",
