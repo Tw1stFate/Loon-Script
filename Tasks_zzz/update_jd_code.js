@@ -48,10 +48,11 @@ function bean() {
     $httpClient.get(
       "http://api.turinglabs.net/api/v1/jd/bean/create/75f7c7vrcm5zbfod5t26fp44fi/",
       function (error, response, data) {
-        if (response.code == 200) {
+        if (response.status == 200) {
+          console.log('success=========')
         } else {
+          console.log('fail=========')
         }
-        console.log(response);
         resolve();
       }
     );
@@ -66,7 +67,6 @@ function pet() {
         if (response.code == 200) {
         } else {
         }
-        console.log(response);
         resolve();
       }
     );
