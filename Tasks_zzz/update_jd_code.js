@@ -50,7 +50,7 @@ function farm() {
         let res = JSON.parse(data);
         console.log('=======' + data['message'])
         console.log(res.message)
-        console.log(`农场=> ${res["massage"]}`);
+        // console.log(`农场=> ${res["massage"]}`);
         resolve();
       }
     );
