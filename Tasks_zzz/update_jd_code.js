@@ -16,14 +16,17 @@ console.log("开始添加京东助力码");
 
 !(async () => {
   await farm();
-  // await bean();
-  // await pet();
+  await bean();
+  await pet();
+  await jxfactory();
+  await ddfactory();
 })()
   .catch((e) => {
     this.log("", `\u2757\ufe0f${this.name}, \u9519\u8bef!`, t);
   })
   .finally(() => {
-    $notification.post('更新成功')
+    console.log('=========添加互助码success========')
+    $notification.post('重新添加互助码成功')
   });
 
 //京东农场
@@ -32,8 +35,8 @@ function farm() {
     $httpClient.get(
       "http://api.turinglabs.net/api/v1/jd/farm/create/bc1cd851e963492884852dc6119c33a6/",
       function (error, response, data) {
-        console.log(data)
-        // console.log('农场=>'+data.message)
+        let massage = JSON.parse(data)
+        console.log('农场=>'+massage)
         resolve();
       }
     );
@@ -45,12 +48,9 @@ function bean() {
     $httpClient.get(
       "http://api.turinglabs.net/api/v1/jd/bean/create/75f7c7vrcm5zbfod5t26fp44fi/",
       function (error, response, data) {
-        console.log(data)
-        if (response.status == 200) {
-          console.log('种豆互助码添加成功')
-        } else {
-          console.log('种豆互助码已存在')
-        }
+        let massage = JSON.parse(data)
+        console.log('农场=>'+massage)
+
         resolve();
       }
     );
@@ -62,22 +62,34 @@ function pet() {
     $httpClient.get(
       "http://api.turinglabs.net/api/v1/jd/pet/create/MTAxODEyMjkyMDAwMDAwMDQwMzg4ODEz/",
       function (error, response, data) {
-        if (response.status == 200) {
-        } else {
-        }
-        console.log(data)
+        let massage = JSON.parse(data)
+        console.log('宠萌=>'+massage)
         resolve();
       }
     );
   });
 }
 
-function zzz() {
+function jxfactory() {
   return new Promise((resolve, reject) => {
     $httpClient.get(
-      "http://api.turinglabs.net/api/v1/jd/farm/create/bc1cd851e963492884852dc6119c33a6/",
+      "http://api.turinglabs.net/api/v1/jd/jxfactory/create/Hz0ItUK3zR6NCRVu-ajkGg==/",
       function (error, response, data) {
-        
+        let massage = JSON.parse(data)
+        console.log('惊喜工厂=>'+massage)
+        resolve();
+      }
+    );
+  });
+}
+
+function ddfactory() {
+  return new Promise((resolve, reject) => {
+    $httpClient.get(
+      "http://api.turinglabs.net/api/v1/jd/ddfactory/create/P04z54XCjVWnYaS5uK2s7ZWeqXuLg/",
+      function (error, response, data) {
+        let massage = JSON.parse(data)
+        console.log('东东工厂=>'+massage)
         resolve();
       }
     );
