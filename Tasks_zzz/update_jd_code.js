@@ -33,7 +33,7 @@ function farm() {
       "http://api.turinglabs.net/api/v1/jd/farm/create/bc1cd851e963492884852dc6119c33a6/",
       function (error, response, data) {
         console.log(response)
-        if (response.code == 200) {
+        if (response.status == 200) {
         } else {
         }
         console.log(response);
@@ -64,7 +64,7 @@ function pet() {
     $httpClient.get(
       "http://api.turinglabs.net/api/v1/jd/pet/create/MTAxODEyMjkyMDAwMDAwMDQwMzg4ODEz/",
       function (error, response, data) {
-        if (response.code == 200) {
+        if (response.status == 200) {
         } else {
         }
         resolve();
@@ -81,7 +81,6 @@ function farm() {
         if (response.code == 200) {
         } else {
         }
-        console.log(response);
         resolve();
       }
     );
