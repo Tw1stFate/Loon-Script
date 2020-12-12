@@ -28,10 +28,10 @@ console.log("=========开始重新添加京东助力码=========");
 
 !(async () => {
   await farm();
-  await bean();
-  await pet();
-  await jxfactory();
-  await ddfactory();
+  // await bean();
+  // await pet();
+  // await jxfactory();
+  // await ddfactory();
 })()
   .catch((e) => {
     this.log("=========fail=========");
