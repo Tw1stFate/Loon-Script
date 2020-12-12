@@ -48,6 +48,8 @@ function farm() {
       "http://api.turinglabs.net/api/v1/jd/farm/create/bc1cd851e963492884852dc6119c33a6/",
       function (error, response, data) {
         let res = JSON.parse(data);
+        console.log('=======' + data['message'])
+        console.log(res.message)
         console.log(`农场=> ${res["massage"]}`);
         resolve();
       }
