@@ -32,8 +32,8 @@ function farm() {
     $httpClient.get(
       "http://api.turinglabs.net/api/v1/jd/farm/create/bc1cd851e963492884852dc6119c33a6/",
       function (error, response, data) {
-        console.log(response)
-        console.log('农场=>'+response.body.message)
+        console.log(data)
+        console.log('农场=>'+data.message)
         resolve();
       }
     );
@@ -46,9 +46,9 @@ function bean() {
       "http://api.turinglabs.net/api/v1/jd/bean/create/75f7c7vrcm5zbfod5t26fp44fi/",
       function (error, response, data) {
         if (response.status == 200) {
-          console.log('农场互助码添加成功')
+          console.log('种豆互助码添加成功')
         } else {
-          console.log('农场互助码已存在')
+          console.log('种豆互助码已存在')
         }
         resolve();
       }
