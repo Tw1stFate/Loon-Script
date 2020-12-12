@@ -16,8 +16,8 @@ console.log("开始添加京东助力码");
 
 !(async () => {
   await farm();
-  await bean();
-  await pet();
+  // await bean();
+  // await pet();
 })()
   .catch((e) => {
     this.log("", `\u2757\ufe0f${this.name}, \u9519\u8bef!`, t);
@@ -45,6 +45,7 @@ function bean() {
     $httpClient.get(
       "http://api.turinglabs.net/api/v1/jd/bean/create/75f7c7vrcm5zbfod5t26fp44fi/",
       function (error, response, data) {
+        console.log(data)
         if (response.status == 200) {
           console.log('种豆互助码添加成功')
         } else {
