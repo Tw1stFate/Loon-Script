@@ -37,8 +37,8 @@ console.log("=========开始重新添加京东助力码=========");
     this.log("=========fail=========");
   })
   .finally(() => {
-    console.log("=========添加互助码success========");
-    $notification.post("重新添加互助码结束", "", "");
+    console.log("=========添加互助码结束========");
+    $notification.post("重新添加互助码", "", "");
   });
 
 //京东农场
