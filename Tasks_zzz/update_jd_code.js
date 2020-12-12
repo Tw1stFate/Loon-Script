@@ -38,7 +38,7 @@ console.log("=========开始重新添加京东助力码=========");
   })
   .finally(() => {
     console.log("=========添加互助码success========");
-    $notification.post("重新添加互助码成功");
+    $notification.post("重新添加互助码结束");
   });
 
 //京东农场
@@ -48,6 +48,7 @@ function farm() {
       "http://api.turinglabs.net/api/v1/jd/farm/create/bc1cd851e963492884852dc6119c33a6/",
       function (error, response, data) {
         let res = JSON.parse(data);
+        console.log(res)
         console.log("农场=>"+res.massage);
         resolve();
       }
