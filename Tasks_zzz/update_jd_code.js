@@ -2,30 +2,30 @@
  * 添加京东助力码
  */
 //log
-console.log("开始添加京东助力码");
+console.log("=========开始重新添加京东助力码=========");
 
-const dict = [
-  {
-    "name":"农场",
-    "url":"http://api.turinglabs.net/api/v1/jd/farm/create/bc1cd851e963492884852dc6119c33a6/"
-  },
-  {
-    "name":"种豆",
-    "url":"http://api.turinglabs.net/api/v1/jd/bean/create/75f7c7vrcm5zbfod5t26fp44fi/"
-  },
-  {
-    "name":"宠萌",
-    "url":"http://api.turinglabs.net/api/v1/jd/pet/create/MTAxODEyMjkyMDAwMDAwMDQwMzg4ODEz/"
-  },
-  {
-    "name":"惊喜工厂",
-    "url":"http://api.turinglabs.net/api/v1/jd/jxfactory/create/Hz0ItUK3zR6NCRVu-ajkGg==/"
-  },
-  {
-    "name":"东东工厂",
-    "url":"http://api.turinglabs.net/api/v1/jd/ddfactory/create/P04z54XCjVWnYaS5uK2s7ZWeqXuLg/"
-  },
-]
+// const dict = [
+//   {
+//     "name":"农场",
+//     "url":"http://api.turinglabs.net/api/v1/jd/farm/create/bc1cd851e963492884852dc6119c33a6/"
+//   },
+//   {
+//     "name":"种豆",
+//     "url":"http://api.turinglabs.net/api/v1/jd/bean/create/75f7c7vrcm5zbfod5t26fp44fi/"
+//   },
+//   {
+//     "name":"宠萌",
+//     "url":"http://api.turinglabs.net/api/v1/jd/pet/create/MTAxODEyMjkyMDAwMDAwMDQwMzg4ODEz/"
+//   },
+//   {
+//     "name":"惊喜工厂",
+//     "url":"http://api.turinglabs.net/api/v1/jd/jxfactory/create/Hz0ItUK3zR6NCRVu-ajkGg==/"
+//   },
+//   {
+//     "name":"东东工厂",
+//     "url":"http://api.turinglabs.net/api/v1/jd/ddfactory/create/P04z54XCjVWnYaS5uK2s7ZWeqXuLg/"
+//   },
+// ]
 
 !(async () => {
   await farm();
