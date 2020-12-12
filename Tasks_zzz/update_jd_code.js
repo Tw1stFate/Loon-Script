@@ -49,9 +49,9 @@ function bean() {
       "http://api.turinglabs.net/api/v1/jd/bean/create/75f7c7vrcm5zbfod5t26fp44fi/",
       function (error, response, data) {
         if (response.status == 200) {
-          console.log('success=========')
+          console.log('农场互助码添加成功')
         } else {
-          console.log('fail=========')
+          console.log('农场互助码已存在')
         }
         resolve();
       }
